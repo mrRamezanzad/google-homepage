@@ -1,12 +1,9 @@
-/* body{ box-sizing: border-box;} */
 /* ====================================== */
 /*                navigation              */
 /* ====================================== */
-
 body {
   margin: 0;
   padding: 0;
-
 }
 
 nav {
@@ -14,13 +11,11 @@ nav {
   margin: 20px 0 10px 10px;
 
   font-size: 13px;
-
 }
 
 li {
   list-style: none;
   margin: 7px 0 0 10px;
-
 }
 
 a {
@@ -49,13 +44,12 @@ a:hover {
 
 .logo {
   align-self: center;
-
 }
 
 /* ====================================== */
 /*                  search                */
 /* ====================================== */
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +71,9 @@ form{
   height: 44px;
   border-radius: 24px;
   border: 1px solid #dfe1e5;
-  background: url('https://web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png') center right 10px no-repeat, url();
+  background: url("https://web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png")
+      center right 10px no-repeat,
+    url();
   background-origin: content-box;
   background-size: 25px;
 }
@@ -93,14 +89,14 @@ i.fas {
   margin-left: 15px;
   position: absolute;
   left: 0;
-  color: #9AA0A6;
+  color: #9aa0a6;
 }
 
 /* ====================================== */
 /*               Buttons                  */
 /* ====================================== */
 .button-group {
-  width: 50%;
+  width: 51%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -109,15 +105,24 @@ i.fas {
 input[type="submit"] {
   box-sizing: border-box;
   min-width: 54px;
-/*  Adding a fixed width could solve the buttons hover change place problem but I wanted it to be dynamic   */
-/*     width: 200px; */
+  /*  Adding a fixed width could solve the buttons hover change place problem but I wanted it to be dynamic   */
+  /*     width: 200px; */
   height: 36px;
-/*  The movement problem got fixed by removing the margin Left & right  */
+  /*  The movement problem got fixed by removing the margin Left & right  */
   margin: 11px 0px;
   padding: 0 16px;
   background-color: #f2f2f2;
-  color: #5F6368;
-  border: none;
+  color: #5f6368;
+/*
+  =========================================================
+*/
+/*
+I'm having a big party here it was frustrating problem of the F**** buttons moving in hover state and it was due to padding adding up in that state and it got fixed by just adding a transparent border in normal state :DUMB:  
+*/
+/*
+  =========================================================
+*/
+  border: 1px solid transparent;
   border-radius: 4px;
   font-size: 14px;
   line-height: 27px;
@@ -125,7 +130,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
   background-color: #f8f8f8;
   border: 1px solid #c6c6c6;
   color: #222;
@@ -146,7 +151,6 @@ footer {
   flex-wrap: no-wrap;
   font-size: 14px;
   justify-content: space-between;
-
 }
 
 .footer-left,
