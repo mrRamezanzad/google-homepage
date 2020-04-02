@@ -1,3 +1,4 @@
+/* body{ box-sizing: border-box;} */
 /* ====================================== */
 /*                navigation              */
 /* ====================================== */
@@ -51,16 +52,16 @@ a:hover {
 
 }
 
-.container {
-  width: 100%;
-  display: flex;
-  flex: row wrap;
-  justify-content: center
-}
-
 /* ====================================== */
 /*                  search                */
 /* ====================================== */
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .search-bar {
   position: relative;
 }
@@ -70,7 +71,7 @@ a:hover {
   clear: both;
 }
 
-input {
+.search-box {
   margin: 30px 0;
   width: 582px;
   height: 44px;
@@ -81,7 +82,7 @@ input {
   background-size: 25px;
 }
 
-input:hover {
+.search-box:hover {
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
   border-color: rgba(223, 225, 229, 0);
 }
@@ -95,10 +96,24 @@ i.fas {
   color: #9AA0A6;
 }
 
-button {
+/* ====================================== */
+/*               Buttons                  */
+/* ====================================== */
+.button-group {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input[type="submit"] {
+  box-sizing: border-box;
   min-width: 54px;
+/*  Adding a fixed width could solve the buttons hover change place problem but I wanted it to be dynamic   */
+/*     width: 200px; */
   height: 36px;
-  margin: 11px 14px;
+/*  The movement problem got fixed by removing the margin Left & right  */
+  margin: 11px 0px;
   padding: 0 16px;
   background-color: #f2f2f2;
   color: #5F6368;
@@ -108,9 +123,9 @@ button {
   line-height: 27px;
 }
 
-button:hover {
+input[type="submit"]:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
   background-color: #f8f8f8;
   border: 1px solid #c6c6c6;
   color: #222;
@@ -134,15 +149,12 @@ footer {
 
 }
 
-
 .footer-left,
 .footer-right {
   display: flex;
   margin: 0 40px;
 }
 
-/* .footer-right {} */
-
 footer a {
   margin-left: 10px;
-} 
+}
